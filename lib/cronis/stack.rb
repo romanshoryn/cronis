@@ -1,6 +1,7 @@
 module Cronis
   class Stack
     attr_reader :stack_size
+    attr_reader :stack_top
 
     def initialize(size)
       @stack = []
@@ -9,7 +10,7 @@ module Cronis
     end
 
     def push(item)
-      if @stack_top == (@stack_size - 1)
+      if is_full?
         raise 'Stack overflow'
       end
 
@@ -38,6 +39,10 @@ module Cronis
 
     def is_empty?
       @stack_top == -1
+    end
+
+    def is_full?
+      @stack_top == (@stack_size - 1)
     end
 
     def to_a
