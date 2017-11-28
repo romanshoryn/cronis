@@ -9,15 +9,15 @@ module Cronis
       def sum(value)
         value_array = value.to_s.split('').map(&:to_i)
         
-        do_sum(value_array, 0)
+        do_sum(value_array, value_array.size - 1)
       end
 
       private
 
       def do_sum(array, idx)
-        return array[idx] if (array.size - 1) == idx
+        return array[idx] if idx == 0
 
-        array[idx] + do_sum(array, idx + 1)
+        array[idx] + do_sum(array, idx - 1)
       end
     end
   end

@@ -7,7 +7,7 @@ RSpec.describe Cronis::Lecture3::ReverseArray do
         @service = Cronis::Lecture3::ValueSum.new
       end
   
-      it 'should return reverted array' do
+      it 'should return sum' do
         expect(@service.sum(1234)).to eq 10
       end
     end
