@@ -6,17 +6,19 @@
 module Cronis
   module Lecture3
     class MaxValue
-      def max(array)
-        do_max(array, array[0])
+      def call(array)
+        max(array, array.size - 1)
       end
 
       private
 
-      def do_max(array, item)
-        return item if array[]
+      def max(array, index)
+        return array[0] if index == 0
 
+        value1 = array[index] 
+        value2 = max(array, index - 1)
 
-        array[idx] + do_sum(array, idx + 1)
+        value1 > value2 ? value1 : value2
       end
     end
   end
