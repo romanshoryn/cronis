@@ -8,19 +8,11 @@ module Cronis
   module Lecture3
     class ReverseArray
       def revert(array)
-        do_revert(array, 0, array.size - 1)
-      end
+        size = array.size - 1
 
-      private
+        return array[0] if size < 1
 
-      def do_revert(array, id1, id2)
-        return array if id1 > id2
-        
-        temp = array[id1]
-        array[id1] = array[id2]
-        array[id2] = temp
-        
-        do_revert(array, id1 + 1, id2 - 1)
+        [array.last, *revert(array[0..size - 1])]
       end
     end
   end

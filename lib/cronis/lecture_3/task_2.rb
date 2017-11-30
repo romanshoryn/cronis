@@ -7,17 +7,14 @@ module Cronis
   module Lecture3
     class ValueSum
       def sum(value)
-        value_array = value.to_s.split('').map(&:to_i)
-        
-        do_sum(value_array, value_array.size - 1)
-      end
+        sign = value < 0 ? -1 : 1
+        number = sign * value
 
-      private
+        if number < 10
+          return sign * number 
+        end
 
-      def do_sum(array, idx)
-        return array[idx] if idx == 0
-
-        array[idx] + do_sum(array, idx - 1)
+        sign * (value % 10 + sum(value / 10))
       end
     end
   end

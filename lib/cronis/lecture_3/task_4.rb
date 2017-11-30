@@ -7,20 +7,15 @@ module Cronis
   module Lecture3
     class MaxValueByDevision
       def call(array)
-        max(array, 0, array.size - 1)
-      end
+        size = array.size
 
-      private
+        return array[0] if size == 1 || size == 0
 
-      def max(array, start_idx, end_idx)
-        return array[end_idx] if end_idx == start_idx
-
-        idx = (end_idx - start_idx) / 2 + start_idx
-
-        max1 = max(array, start_idx, idx)
-        max2 = max(array, idx + 1, end_idx)
-
-        return max1 > max2 ? max1 : max2
+        mid = size / 2
+        val1 = call(array[0..mid - 1])
+        val2 = call(array[mid, size])
+        
+        val1 > val2 ? val1 : val2
       end
     end
   end

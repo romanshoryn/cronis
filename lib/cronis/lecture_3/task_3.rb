@@ -7,18 +7,14 @@ module Cronis
   module Lecture3
     class MaxValue
       def call(array)
-        max(array, array.size - 1)
-      end
+        idx = array.size - 1
 
-      private
+        return array[0] if idx < 1
 
-      def max(array, index)
-        return array[0] if index == 0
-
-        value1 = array[index] 
-        value2 = max(array, index - 1)
-
-        value1 > value2 ? value1 : value2
+        val1 = call(array[0..idx - 1])
+        val2 = array[idx]
+        
+        val1 > val2 ? val1 : val2
       end
     end
   end

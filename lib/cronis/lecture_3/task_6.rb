@@ -1,24 +1,13 @@
+# Задача 6
+# Напишите функцию, которая решает является ли слово палиндром.
+# Пример
+# input: abba
+# output: true
 module Cronis
   module Lecture3
     class Palindrom
-      def call(string)
-        array = string.split('')
-
-        val = swap(array, 0, array.size - 1).join('')
-
-        string == val
-      end
-
-      private
-      
-      def swap(array, idx1, idx2)
-        return array if idx1 > idx2
-
-        val = array[idx1]
-        array[idx1] = array[idx2]
-        array[idx2] = val
-
-        swap(array, idx1 + 1, idx2 -  1)
+      def call(str)
+        
       end
     end
   end
