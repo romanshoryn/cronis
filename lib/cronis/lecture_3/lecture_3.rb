@@ -4,6 +4,7 @@ require 'cronis/lecture_3/task_3'
 require 'cronis/lecture_3/task_4'
 require 'cronis/lecture_3/task_5'
 require 'cronis/lecture_3/task_6'
+require 'cronis/lecture_3/task_8'
 
 module Lecture3
 end
