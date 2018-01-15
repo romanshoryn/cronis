@@ -8,7 +8,7 @@ require 'cronis/lecture_5/lecture_5'
 require 'cronis/lecture_6/lecture_6'
 require 'cronis/lecture_7/lecture_7'
 
-require 'cronis/lecture_9/lecture_9'
+require 'cronis/lecture_13/lecture_13'
 
 module Cronis
 end
