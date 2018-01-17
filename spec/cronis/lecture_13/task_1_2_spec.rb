@@ -17,7 +17,7 @@ RSpec.describe Cronis::Lecture13::Task12 do
         expect(result).to eq 8
 
         result = Cronis::Lecture13::Task12.new.find(array3, val)
-        expect(result).to eq 2
+        expect(result).to eq 1
       end
     end
   end
